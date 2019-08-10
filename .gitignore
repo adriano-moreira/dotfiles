@@ -1,0 +1,6 @@
+*
+!.config/nvim/init.vim
+!.ideavimrc
+!.tmux.conf
+!.gitignore
+!README.md
