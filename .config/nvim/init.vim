@@ -26,7 +26,7 @@ Plug 'dikiaap/minimalist'
 Plug 'scrooloose/nerdtree'
 call plug#end()
 
-colorscheme 
+colorscheme minimalist
 
 au BufNewFile,BufRead *.ts setlocal filetype=typescript
 au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
