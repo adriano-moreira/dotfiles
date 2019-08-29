@@ -1,14 +1,69 @@
-set number
-set relativenumber
+source ~/.vimrc_base.vim
 
-imap jj <Esc>
-"nmap oo o<Esc>k
-"nmap ooo o<Enter>
-nmap OO O<Esc>j
+set surround
+set scrolloff=3
 
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
+" Reload
+nnoremap <leader>re :source ~/.ideavimrc<cr>
+
+" Build & Run
+nnoremap <leader>rr :action Run<cr>
+nnoremap <leader>cc :action CleanGradleProject<cr>
+nnoremap <leader>ss :action Android.SyncProject<cr>
+
+" Debug
+nnoremap <leader>dd :action Debug<cr>
+nnoremap <leader>bb :action ToggleLineBreakpoint<cr>
+nnoremap <leader>only :action CloseAllEditorsButActive<cr>
+nnoremap <leader>clear :action CloseAllEditors<cr>
+
+" Window
+nnoremap <leader>sp :action SplitVertically<cr>
+nnoremap <leader>hsp :action SplitHorizontally<cr>
+nnoremap <leader>vsp :action SplitVertically<cr>
+
+" Git
+nnoremap <leader>gh :action LocalHistory.ShowHistory<cr>
+
+" Refactor
+nnoremap <leader>R :action Refactorings.QuickListPopupAction<cr>
+nnoremap <leader>L :action ReformatCode<cr>
+nnoremap <leader>ic :action InspectCode<cr>
+nnoremap <leader>rm :action ExtractMethod<cr>
+nnoremap <leader>rn :action RenameElement<cr>
+nnoremap <leader>rf :action RenameFile<cr>
+nnoremap <leader>rv :action IntroduceVariable<cr>
+nnoremap <leader>rs :action ExtractSuperclass<cr>
+nnoremap <leader>ri :action Inline<cr>
+
+" Tool
+nnoremap <leader>fp :action FindInPath<cr>
+nnoremap <leader>fu :action FindUsages<cr>
+nnoremap <leader>su :action ShowUsages<cr>
+nnoremap <leader>ga :action GotoAction<cr>
+nnoremap <leader>lc :action ActivateLogcatToolWindow<cr>
+nnoremap <leader>sh :action ActivateTerminalToolWindow<cr>
+nnoremap [e :action GotoNextError<cr>
+nnoremap ]e :action GotoPreviousError<cr>
+
+
+nmap <leader>g :action GotoDeclaration<cr>
+nmap <leader>b :action Back<cr>
+nmap <leader>f :action Forward<cr>
+
+nmap <leader>t :action GotoFile<cr>
+nmap <leader>c :action GotoClass<cr>
+nmap <leader>ns :action GotoSymbol<cr>
+nmap <leader>nm :action FileStructurePopup<cr>
+nmap <leader>d :action ShowErrorDescription<cr>
+nmap == :action ReformatCode<cr>
+
+" Switches between .cc and .h file!
+nmap <leader>s :action GotoRelated<cr>
+
+"nmap <a-j> 15gj
+"nmap <a-k> 15gk
+
+" Won't work in visual mode (with vmap) for some reason.
+" Use default map of <c-/> for that.
+nmap gcc :action CommentByLineComment<cr>
