@@ -1,7 +1,7 @@
 my dotfiles
 -----------
 
-* nvim
+* neovim
 * tmux
 * ideavim
 
