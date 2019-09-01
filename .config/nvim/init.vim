@@ -1,5 +1,7 @@
 source ~/.vimrc_base.vim
 
+language POSIX
+
 " plugins
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
