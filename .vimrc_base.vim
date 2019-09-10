@@ -1,7 +1,7 @@
+set hidden
 set number
 set relativenumber
 
-syntax enable
 set mouse=a
 
 set clipboard=unnamedplus
