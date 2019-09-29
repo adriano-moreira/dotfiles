@@ -1,10 +1,14 @@
 my dotfiles
 -----------
 
-* neovim
+* neovim 
 * tmux
 * ideavim
 
+
+my speed cheats:
+* [my vim speed cheat](speed_cheat_vim.md)
+* [my tmux speed cheat](speed_cheat_tmux.md)
 
 my playground with docker
 -------------------------
