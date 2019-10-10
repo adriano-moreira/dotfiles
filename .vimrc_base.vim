@@ -2,6 +2,8 @@ set hidden
 set number
 set relativenumber
 
+language en_US
+
 set mouse=a
 
 set clipboard=unnamedplus
