@@ -77,3 +77,4 @@ nmap <leader>s :action GotoRelated<cr>
 " Won't work in visual mode (with vmap) for some reason.
 " Use default map of <c-/> for that.
 nmap gcc :action CommentByLineComment<cr>
+set clipboard+=ideaput
