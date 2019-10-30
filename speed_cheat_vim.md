@@ -3,6 +3,7 @@ vim tips
 
 tips for vim / nvim / ideavim / VSCodeVim
 
+[:help object-motions](https://vimhelp.org/motion.txt.html#object-motions)
 
 the basic:
 ----------
