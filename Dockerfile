@@ -12,6 +12,5 @@ RUN pacman -Sy --noconfirm neovim \
 	zsh 
 
 WORKDIR /root
-COPY . dotfiles
 
-CMD ["zsh"]
+COPY . dotfiles
