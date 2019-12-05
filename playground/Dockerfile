@@ -11,8 +11,15 @@ RUN pacman -Sy --noconfirm neovim \
 	tmux \
 	zsh 
 
-RUN curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | zsh || true
+RUN useradd adriano
 
-WORKDIR /root
+WORKDIR /home/adriano
+RUN chown -R adriano /home/adriano
+
+RUN su - adriano -c 'curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | zsh'
+
 
 COPY . dotfiles
+RUN chown adriano -R dotfiles
+
+USER adriano
