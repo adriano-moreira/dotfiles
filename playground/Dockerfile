@@ -9,6 +9,7 @@ RUN pacman -Sy --noconfirm neovim \
 	nodejs \
 	tldr \
 	tmux \
+	neofetch \
 	zsh 
 
 RUN useradd adriano
