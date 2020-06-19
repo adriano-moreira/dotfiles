@@ -3,6 +3,9 @@ set hidden
 set number
 set relativenumber
 
+set cursorline
+set cursorcolumn
+
 "language en_US
 
 set mouse=a

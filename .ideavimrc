@@ -78,3 +78,51 @@ nmap <leader>s :action GotoRelated<cr>
 " Use default map of <c-/> for that.
 nmap gcc :action CommentByLineComment<cr>
 set clipboard+=ideaput
+
+
+
+
+
+"futter:
+"ActivateFlutterInspectorToolWindow
+"ActivateFlutterOutlineToolWindow
+"ActivateFlutterPerformanceToolWindow
+"flutter.androidstudio.open
+"flutter.build.aab
+"flutter.build.aar
+"flutter.build.apk
+"flutter.build.ios
+"flutter.clean
+"Flutter.DeviceSelector
+"Flutter.DeviceSelectorRefresher
+"flutter.devtools.open
+"flutter.doctor
+"Flutter.ExtractWidget                              <A-C-W>
+map <leader>fH :action Flutter.FlutterHelp<cr>
+"flutter.gettingStarted
+"Flutter.InspectorActions
+"Flutter.JumpToSource                               <C-Down>
+"Flutter.JumpToTypeSource                           <S-F4>
+"Flutter.MainToolbarActions
+"flutter.makeHostAppEditable
+"Flutter.Menu.RunProfileAction
+"Flutter.Menu.RunReleaseAction
+"Flutter.MenuActions.Run
+"flutter.NewProject
+"flutter.NewProject.welcome
+"flutter.pub.get
+"flutter.pub.upgrade
+"flutter.submitFeedback
+map <leader>fr :action Flutter.Toolbar.ReloadAction<cr>
+"Flutter.Toolbar.ReloadAllAction<cr>
+map <leader>fR :action Flutter.Toolbar.RestartAction<cr>
+map <leader>rr :action Flutter.Toolbar.RestartAction<cr>
+"Flutter.Toolbar.RestartAllAction                   <A-C-S-\>
+"flutter.upgrade
+"flutter.xcode.open
+"FlutterBuildActionGroup
+"FlutterExternalIdeActionGroup
+"FlutterPackagesExplorerActionGroup
+"FlutterToolsActionGroup
+"io.flutter.OpenDevToolsAction
+"io.flutter.RestartDaemon
