@@ -114,6 +114,7 @@ map <leader>fH :action Flutter.FlutterHelp<cr>
 "flutter.pub.upgrade
 "flutter.submitFeedback
 map <leader>fr :action Flutter.Toolbar.ReloadAction<cr>
+map <leader>ff :action Flutter.Toolbar.ReloadAction<cr>
 "Flutter.Toolbar.ReloadAllAction<cr>
 map <leader>fR :action Flutter.Toolbar.RestartAction<cr>
 map <leader>rr :action Flutter.Toolbar.RestartAction<cr>

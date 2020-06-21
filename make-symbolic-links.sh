@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 ln -s -f `pwd`/.vimrc_base.vim  ~/.vimrc_base.vim 
