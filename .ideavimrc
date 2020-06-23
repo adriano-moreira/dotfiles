@@ -66,7 +66,7 @@ nmap <leader>df :action ToggleDistractionFreeMode<cr>
 nmap <leader>pm :action TogglePresentationMode<cr>
 
 "nmap == :action ReformatCode<cr>
-nmap == :action ReformatWithPrettierAction<cr>:action ReformatCode<cr>
+nmap == :action ReformatCode<cr>:action OptimizeImports<cr>
 
 " Switches between .cc and .h file!
 nmap <leader>s :action GotoRelated<cr>
@@ -97,7 +97,7 @@ set clipboard+=ideaput
 "Flutter.DeviceSelectorRefresher
 "flutter.devtools.open
 "flutter.doctor
-"Flutter.ExtractWidget                              <A-C-W>
+map <leader>ew :action Flutter.ExtractWidget<cr>
 map <leader>fH :action Flutter.FlutterHelp<cr>
 "flutter.gettingStarted
 "Flutter.InspectorActions
@@ -127,3 +127,5 @@ map <leader>rr :action Flutter.Toolbar.RestartAction<cr>
 "FlutterToolsActionGroup
 "io.flutter.OpenDevToolsAction
 "io.flutter.RestartDaemon
+map <leader>fn :action Dart.NewDartFile<cr>
+
