@@ -7,6 +7,29 @@ set scrolloff=3
 " Reload
 nnoremap <leader>re :source ~/.ideavimrc<cr>
 
+
+"like lsc
+"    'GoToDefinition': <C-]>,
+"    'GoToDefinitionSplit': [<C-W>], <C-W><C-]>],
+"    'FindReferences': gr,
+nmap gr :action ShowUsages<cr>
+"    'NextReference': <C-n>,
+"    'PreviousReference': <C-p>,
+"    'FindImplementations': gI,
+"    'FindCodeActions': ga,
+nmap ga :action ShowIntentionActions<cr>
+"    'Rename': gR,
+nmap gR :action RenameElement<cr>
+"    'DocumentSymbol': go,
+nmap go :action FileStructurePopup<cr>
+"    'WorkspaceSymbol': gS,
+"    'SignatureHelp': gm,
+
+
+
+
+
+
 " Build & Run
 nnoremap <leader>rr :action Run<cr>
 nnoremap <leader>cc :action CleanGradleProject<cr>
@@ -116,8 +139,8 @@ map <leader>fH :action Flutter.FlutterHelp<cr>
 map <leader>fr :action Flutter.Toolbar.ReloadAction<cr>
 map <leader>ff :action Flutter.Toolbar.ReloadAction<cr>
 "Flutter.Toolbar.ReloadAllAction<cr>
-map <leader>fR :action Flutter.Toolbar.RestartAction<cr>
-map <leader>rr :action Flutter.Toolbar.RestartAction<cr>
+map <leader>RR :action Flutter.Toolbar.RestartAction<cr>
+map <leader>rr :action Flutter.Toolbar.ReloadAction<cr>
 "Flutter.Toolbar.RestartAllAction                   <A-C-S-\>
 "flutter.upgrade
 "flutter.xcode.open
