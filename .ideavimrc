@@ -6,6 +6,7 @@ set scrolloff=3
 
 " Reload
 nnoremap <leader>re :source ~/.ideavimrc<cr>
+nnoremap <leader>n :action NewFile<cr>
 
 
 "like lsc
@@ -16,10 +17,12 @@ nmap gr :action ShowUsages<cr>
 "    'NextReference': <C-n>,
 "    'PreviousReference': <C-p>,
 "    'FindImplementations': gI,
+nmap gI :action GotoImplementation<cr>
 "    'FindCodeActions': ga,
 nmap ga :action ShowIntentionActions<cr>
 "    'Rename': gR,
 nmap gR :action RenameElement<cr>
+nmap gM :action RenameFile<cr>
 "    'DocumentSymbol': go,
 nmap go :action FileStructurePopup<cr>
 "    'WorkspaceSymbol': gS,
