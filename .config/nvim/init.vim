@@ -24,12 +24,11 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 
-
 let g:lsc_auto_map = v:true
-map <a-1> :NERDTreeToggle<enter>
-map <leader>f :NERDTreeFind<enter>
+map <A-1> :NERDTreeToggle<cr>
+map <leader>z :NERDTreeFind<cr>
 
-map <a-left> gT
-map <a-right> gt
+map <A-left> gT
+map <A-right> gt
 
 nmap == :DartFmt<cr>

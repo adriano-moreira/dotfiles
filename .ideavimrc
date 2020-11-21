@@ -1,5 +1,6 @@
 source ~/.vimrc_base.vim
 
+set easymotion
 set surround
 set multiple-cursors
 set scrolloff=3
@@ -15,7 +16,9 @@ nnoremap <leader>n :action NewFile<cr>
 "    'FindReferences': gr,
 nmap gr :action ShowUsages<cr>
 "    'NextReference': <C-n>,
+nmap <C-n> :action NextOccurence<cr>
 "    'PreviousReference': <C-p>,
+nmap <C-p> :action PreviousOccurence<cr>
 "    'FindImplementations': gI,
 nmap gI :action GotoImplementation<cr>
 "    'FindCodeActions': ga,
@@ -26,7 +29,9 @@ nmap gM :action RenameFile<cr>
 "    'DocumentSymbol': go,
 nmap go :action FileStructurePopup<cr>
 "    'WorkspaceSymbol': gS,
+nmap gS :action GotoSymbol<cr>
 "    'SignatureHelp': gm,
+nmap gm :action ParameterInfo<cr>
 
 
 
@@ -53,7 +58,7 @@ nnoremap <leader>vsp :action SplitVertically<cr>
 nnoremap <leader>gh :action LocalHistory.ShowHistory<cr>
 
 " Refactor
-nnoremap <leader>R :action Refactorings.QuickListPopupAction<cr>
+nnoremap <leader>bb :action Refactorings.QuickListPopupAction<cr>
 nnoremap <leader>L :action ReformatCode<cr>
 nnoremap <leader>ic :action InspectCode<cr>
 nnoremap <leader>rm :action ExtractMethod<cr>
