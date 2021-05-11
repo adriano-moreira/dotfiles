@@ -160,3 +160,11 @@ map <leader>rr :action Flutter.Toolbar.ReloadAction<cr>
 "io.flutter.RestartDaemon
 map <leader>fn :action Dart.NewDartFile<cr>
 
+
+map <F11> :action ToggleFullScreen<cr>
+map <A-F11> :action ToggleZenMode<cr>
+map <C-Esc> :action ActivateTerminalToolWindow<cr>
+map <A-s> :action ActivateTerminalToolWindow<cr>
+
+
+
