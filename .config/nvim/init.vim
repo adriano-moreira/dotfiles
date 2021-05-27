@@ -1,7 +1,7 @@
 source ~/.vimrc_base.vim
 
 call plug#begin('~/.vim/plugged')
-Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline'
 Plug 'tomasiser/vim-code-dark'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'

@@ -1,7 +1,17 @@
 source ~/.vimrc_base.vim
 
-set easymotion
+set number relativenumber
+set idearefactormode=keep
+set ideajoin
+
+" extensions
 set surround
+
+set NERDTree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
+
+set easymotion
 set multiple-cursors
 set scrolloff=3
 
@@ -78,7 +88,7 @@ nnoremap <leader>sh :action ActivateTerminalToolWindow<cr>
 nnoremap [e :action GotoNextError<cr>
 nnoremap ]e :action GotoPreviousError<cr>
 
-
+nmap gi :action Generate<cr>
 nmap <leader>g :action GotoDeclaration<cr>
 nmap <leader>b :action Back<cr>
 nmap <leader>f :action Forward<cr>
@@ -110,7 +120,12 @@ nmap <leader>s :action GotoRelated<cr>
 nmap gcc :action CommentByLineComment<cr>
 set clipboard+=ideaput
 
+nmap \q <action>(QuickJavaDoc)
+nmap <leader>q :action QuickJavaDoc<cr>
 
+nmap <C-q> :action QuickJavaDoc<cr>
+map <C-s> :action EditorSelectWord<cr>
+map <C-w> :action SurroundWith<cr>
 
 
 
@@ -124,7 +139,7 @@ set clipboard+=ideaput
 "flutter.build.apk
 "flutter.build.ios
 "flutter.clean
-"Flutter.DeviceSelector
+map <leader>fd :action Flutter.DeviceSelector<cr>
 "Flutter.DeviceSelectorRefresher
 "flutter.devtools.open
 "flutter.doctor
