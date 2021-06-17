@@ -85,8 +85,8 @@ nnoremap <leader>su :action ShowUsages<cr>
 nnoremap <leader>ga :action GotoAction<cr>
 nnoremap <leader>lc :action ActivateLogcatToolWindow<cr>
 nnoremap <leader>sh :action ActivateTerminalToolWindow<cr>
-nnoremap [e :action GotoNextError<cr>
-nnoremap ]e :action GotoPreviousError<cr>
+nnoremap ]e :action GotoNextError<cr>
+nnoremap [e :action GotoPreviousError<cr>
 
 nmap gi :action Generate<cr>
 nmap <leader>g :action GotoDeclaration<cr>
