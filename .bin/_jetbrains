@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+SCRIPT="`dirname $0`/jetbrains/$1"
+PARAMS="$2"
+
+if [ -z "$PARAMS" ]
+then
+  PARAMS=`pwd`
+fi
+
+#call launcher
+$SCRIPT $PARAMS &>/dev/null &
+
+#detache child process
+disown
+
+
