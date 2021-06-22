@@ -124,8 +124,9 @@ nmap \q <action>(QuickJavaDoc)
 nmap <leader>q :action QuickJavaDoc<cr>
 
 nmap <C-q> :action QuickJavaDoc<cr>
-map <C-s> :action EditorSelectWord<cr>
-map <C-w> :action SurroundWith<cr>
+map <A-=> :action EditorSelectWord<cr>
+map <A--> :action EditorUnSelectWord<cr>
+map <A-s> :action SurroundWith<cr>
 
 
 
@@ -179,7 +180,6 @@ map <leader>fn :action Dart.NewDartFile<cr>
 map <F11> :action ToggleFullScreen<cr>
 map <A-F11> :action ToggleZenMode<cr>
 map <C-Esc> :action ActivateTerminalToolWindow<cr>
-map <A-s> :action ActivateTerminalToolWindow<cr>
 
 
 
