@@ -1,11 +1,117 @@
+" Thanks:
+" https://github.com/kimkevin/dotfiles/blob/master/.ideavimrc
+" https://github.com/pchampio/dotfiles/blob/master/ideavimrc
+
 source ~/.vimrc_base.vim
 
 set number relativenumber
 set idearefactormode=keep
 set ideajoin
-
-" extensions
+set scrolloff=5
 set surround
+
+nmap \c :action CommentByLineComment<cr>
+nmap \q <action>(QuickJavaDoc)
+
+
+" nnoremap / :action Find<CR>
+nnoremap g/ :action FindInPath<cr>
+nnoremap n :action FindNext<CR>
+nnoremap N :action FindPrevious<CR>
+
+nmap <Leader>m :action ProjectViewChangeView<cr>
+
+" join / split lines
+nmap gJ :action EditorJoinLines<cr>
+nmap gS :action EditorSplitLine<cr>
+
+" Reload .ideavimrc
+nnoremap <Space>vs :source ~/.ideavimrc<CR>
+
+nnoremap <Leader>g <c-]>
+nnoremap <Leader>h :action GotoRelated<cr>
+nmap <leader>o :action Back<cr>
+nmap <leader>i :action Forward<cr>
+
+" move line up / down
+nnoremap <a-j> :action MoveLineDown<cr>:action VimAutoIndentLines<cr>
+nnoremap <a-k> :action MoveLineUp<cr>:action VimAutoIndentLines<cr>
+
+
+noremap <Leader>S :action VimWindowSplitVertical<cr>
+noremap <Leader>I :action VimWindowSplitHorizontal<cr>
+
+nnoremap ; :
+
+nmap <c-p> :action SearchEverywhere<cr>
+
+nmap <leader>F :action GotoSymbol<cr>
+
+" long jump method
+nmap J :action MethodDown<cr>
+nmap K :action MethodUp<cr>
+
+nmap <Leader>e :action RenameElement<cr>
+
+nmap <Leader>* <esc>:noh<cr><esc>:action HighlightUsagesInFile<cr>
+
+" nmap u <esc>:action VimUndo<cr>
+
+nnoremap [g :action VcsShowPrevChangeMarker<cr>
+nnoremap ]g :action VcsShowNextChangeMarker<cr>
+
+nnoremap ]e :action GotoNextError<cr>
+nnoremap [e :action GotoPreviousError<cr>
+
+" don't overwrite register when pasting over selection
+vnoremap p pgvy
+
+nnoremap <Leader>a :action VimChangeNumberInc<cr>
+nnoremap <Leader>x :action VimChangeNumberDec<cr>
+nnoremap <Leader>q :action HideAllWindows<cr>
+
+nnoremap <Leader>b :action ShowColorPicker<cr>
+nnoremap <Leader>f :action ShowFilePath<cr>
+
+
+" nmap yL yg_
+nmap cL cg_<Esc>x
+" nmap dL dg_
+
+" nnoremap yH y^
+nnoremap cJ C
+nnoremap cH c^
+" nnoremap dH d^
+
+nnoremap r <NOP>
+
+" replace register
+nnoremap rL vg_"_dp
+
+nnoremap riw viw"_c<esc>p
+
+nnoremap riW viW"_dp
+
+nnoremap ri" vi""_dP
+nnoremap ri' vi'"_dP
+
+nnoremap ri( vi("_dP
+nnoremap ri{ vi{"_dP
+nnoremap ri[ vi["_dP
+
+nnoremap rl v"_dp
+nnoremap rr V"_dP
+
+
+" change font size
+nmap <c-=> :action EditorIncreaseFontSize<CR>
+nmap <c--> :action EditorDecreaseFontSize<CR>
+nmap <c-0> :action EditorResetFontSize<CR>
+
+nmap <Leader>t :action SurroundWith<cr>
+
+
+
 
 set NERDTree
 let g:NERDTreeMapActivateNode='l'
@@ -85,8 +191,6 @@ nnoremap <leader>su :action ShowUsages<cr>
 nnoremap <leader>ga :action GotoAction<cr>
 nnoremap <leader>lc :action ActivateLogcatToolWindow<cr>
 nnoremap <leader>sh :action ActivateTerminalToolWindow<cr>
-nnoremap ]e :action GotoNextError<cr>
-nnoremap [e :action GotoPreviousError<cr>
 
 nmap gi :action Generate<cr>
 nmap <leader>g :action GotoDeclaration<cr>
@@ -112,18 +216,9 @@ nmap == :action ReformatCode<cr>:action OptimizeImports<cr>
 " Switches between .cc and .h file!
 nmap <leader>s :action GotoRelated<cr>
 
-"nmap <a-j> 15gj
-"nmap <a-k> 15gk
-
-" Won't work in visual mode (with vmap) for some reason.
-" Use default map of <c-/> for that.
 nmap gcc :action CommentByLineComment<cr>
 set clipboard+=ideaput
 
-nmap \q <action>(QuickJavaDoc)
-nmap <leader>q :action QuickJavaDoc<cr>
-
-nmap <C-q> :action QuickJavaDoc<cr>
 map <A-=> :action EditorSelectWord<cr>
 map <A--> :action EditorUnSelectWord<cr>
 map <A-s> :action SurroundWith<cr>
