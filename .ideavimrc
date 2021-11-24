@@ -12,12 +12,11 @@ set surround
 
 nmap \c :action CommentByLineComment<cr>
 nmap \q <action>(QuickJavaDoc)
-
+nmap \t :action ActivateTerminalToolWindow<cr>
+nmap :G log
 
 " nnoremap / :action Find<CR>
 nnoremap g/ :action FindInPath<cr>
-nnoremap n :action FindNext<CR>
-nnoremap N :action FindPrevious<CR>
 
 nmap <Leader>m :action ProjectViewChangeView<cr>
 
@@ -82,25 +81,6 @@ nmap cL cg_<Esc>x
 nnoremap cJ C
 nnoremap cH c^
 " nnoremap dH d^
-
-nnoremap r <NOP>
-
-" replace register
-nnoremap rL vg_"_dp
-
-nnoremap riw viw"_c<esc>p
-
-nnoremap riW viW"_dp
-
-nnoremap ri" vi""_dP
-nnoremap ri' vi'"_dP
-
-nnoremap ri( vi("_dP
-nnoremap ri{ vi{"_dP
-nnoremap ri[ vi["_dP
-
-nnoremap rl v"_dp
-nnoremap rr V"_dP
 
 
 " change font size
@@ -274,7 +254,6 @@ map <leader>fn :action Dart.NewDartFile<cr>
 
 map <F11> :action ToggleFullScreen<cr>
 map <A-F11> :action ToggleZenMode<cr>
-map <C-Esc> :action ActivateTerminalToolWindow<cr>
 
 
 

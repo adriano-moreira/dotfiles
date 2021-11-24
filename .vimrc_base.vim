@@ -3,8 +3,9 @@
 set incsearch hlsearch
 set ignorecase smartcase
 set number relativenumber
-set cursorline
-set cursorcolumn
+
+"set cursorline
+"set cursorcolumn
 
 set showmode
 set autoread           " Automatically reload changes if detected
