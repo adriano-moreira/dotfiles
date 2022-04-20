@@ -1,19 +1,50 @@
-" Thanks:
-" https://github.com/kimkevin/dotfiles/blob/master/.ideavimrc
-" https://github.com/pchampio/dotfiles/blob/master/ideavimrc
-
-source ~/.vimrc_base.vim
-
 set number relativenumber
-set idearefactormode=keep
-set ideajoin
-set scrolloff=5
-set surround
+" set idearefactormode=keep
+" set ideajoin
+" set scrolloff=5
+ "set surround
+
+" Reload
+nnoremap <space>re :source ~/.ideavimrc<cr>
+nnoremap <space>n :action NewFile<cr>
 
 nmap \c :action CommentByLineComment<cr>
 nmap \q <action>(QuickJavaDoc)
 nmap \t :action ActivateTerminalToolWindow<cr>
+nmap \Z :action ToggleFullScreen<cr>
+nmap \z :action ToggleZenMode<cr>
 nmap :G log
+
+" lazy close
+nmap <space><space> :q!<cr>
+
+""" Helix Editor Like
+
+" delete one character
+nmap d x        
+
+" select line
+nmap x V        
+
+" move down in selection mode/select next line
+vmap x <down>   
+
+" redo
+nmap U <c-r> 
+
+" multi cursor, THIS DO NOT WORK
+nmap C <c><c-down>
+
+
+
+"" Helix Editor - Space
+
+" open filepicker
+nmap <space>f :action GotoFile<cr>
+" nmap <space>f :action SearchEverywhere<cr>
+
+" Open symbol picker
+nmap <space>s :action FileStructurePopup<cr>
 
 " nnoremap / :action Find<CR>
 nnoremap g/ :action FindInPath<cr>
@@ -24,8 +55,6 @@ nmap <Leader>m :action ProjectViewChangeView<cr>
 nmap gJ :action EditorJoinLines<cr>
 nmap gS :action EditorSplitLine<cr>
 
-" Reload .ideavimrc
-nnoremap <Space>vs :source ~/.ideavimrc<CR>
 
 nnoremap <Leader>g <c-]>
 nnoremap <Leader>h :action GotoRelated<cr>
@@ -42,7 +71,6 @@ noremap <Leader>I :action VimWindowSplitHorizontal<cr>
 
 nnoremap ; :
 
-nmap <c-p> :action SearchEverywhere<cr>
 
 nmap <leader>F :action GotoSymbol<cr>
 
@@ -101,32 +129,16 @@ set easymotion
 set multiple-cursors
 set scrolloff=3
 
-" Reload
-nnoremap <leader>re :source ~/.ideavimrc<cr>
-nnoremap <leader>n :action NewFile<cr>
 
 
-"like lsc
-"    'GoToDefinition': <C-]>,
-"    'GoToDefinitionSplit': [<C-W>], <C-W><C-]>],
-"    'FindReferences': gr,
 nmap gr :action ShowUsages<cr>
-"    'NextReference': <C-n>,
 nmap <C-n> :action NextOccurence<cr>
-"    'PreviousReference': <C-p>,
 nmap <C-p> :action PreviousOccurence<cr>
-"    'FindImplementations': gI,
 nmap gI :action GotoImplementation<cr>
-"    'FindCodeActions': ga,
 nmap ga :action ShowIntentionActions<cr>
-"    'Rename': gR,
 nmap gR :action RenameElement<cr>
 nmap gM :action RenameFile<cr>
-"    'DocumentSymbol': go,
-nmap go :action FileStructurePopup<cr>
-"    'WorkspaceSymbol': gS,
 nmap gS :action GotoSymbol<cr>
-"    'SignatureHelp': gm,
 nmap gm :action ParameterInfo<cr>
 
 
@@ -177,8 +189,6 @@ nmap <leader>g :action GotoDeclaration<cr>
 nmap <leader>b :action Back<cr>
 nmap <leader>f :action Forward<cr>
 
-"nmap <leader>t :action GotoFile<cr>
-nmap <c-p> :action GotoFile<cr>
 nmap <leader>c :action GotoClass<cr>
 nmap <leader>ns :action GotoSymbol<cr>
 nmap <leader>nm :action FileStructurePopup<cr>
@@ -252,8 +262,6 @@ map <leader>rr :action Flutter.Toolbar.ReloadAction<cr>
 map <leader>fn :action Dart.NewDartFile<cr>
 
 
-map <F11> :action ToggleFullScreen<cr>
-map <A-F11> :action ToggleZenMode<cr>
 
 
 

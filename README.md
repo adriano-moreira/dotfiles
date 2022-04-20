@@ -1,7 +1,7 @@
 my dotfiles
 -----------
 
-* neovim 
+* Helix Editor
 * tmux
 * ideavim
 
