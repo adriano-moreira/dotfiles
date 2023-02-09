@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
-SCRIPT="`dirname $0`/jetbrains/$1"
+
+BASE_NAME=$1
+
+#SCRIPT="`dirname $0`/jetbrains/$BASE_NAME"
+SCRIPT="$HOME/.local/share/JetBrains/Toolbox/scripts/$BASE_NAME"
 PARAMS="$2"
 
 if [ -z "$PARAMS" ]
@@ -8,11 +12,10 @@ then
   PARAMS=`pwd`
 fi
 
+echo "starting $BASE_NAME..."
+
 #call launcher
 $SCRIPT $PARAMS &>/dev/null &
 
 #detache child process
 disown
-
-
-
