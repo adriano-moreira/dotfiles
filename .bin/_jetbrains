@@ -15,7 +15,7 @@ fi
 echo "starting $BASE_NAME..."
 
 #call launcher
-$SCRIPT $PARAMS &>/dev/null &
+eval $SCRIPT $PARAMS &>/dev/null &
 
 #detache child process
 disown
