@@ -9,6 +9,3 @@ ln -s -f $BASE/.ideavimrc  ~/.ideavimrc
 mkdir -p ~/tools
 ln -s -f $BASE/.bin  ~/tools
 
-#tmux
-ln -s -f $BASE/.tmux.conf ~/.tmux.conf
-

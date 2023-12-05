@@ -1,1 +1,4 @@
-studio
+#!/bin/bash
+set -ex
+"`dirname $0`/_jetbrains" `basename $0` "$@"
+
