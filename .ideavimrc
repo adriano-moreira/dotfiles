@@ -1,5 +1,16 @@
 let mapleader = " "
 
+" actions
+nmap <leader>h <action>(PreviousTab)
+nmap <leader>l <action>(NextTab)
+nmap <leader>bd <action>(CloseEditor)
+nmap <leader>i <action>(Generate)
+nmap <leader>m <action>(Git.Menu)
+nmap <leader>s <action>(QuickChangeScheme)
+nmap <leader>/ <action>(ShowErrorDescription)
+nmap <leader>e <action>(GotoNextError)
+nnoremap <leader><leader> <C-Tab>
+
 "set NERDTree
 "set easymotion
 "set ideajoin
@@ -9,6 +20,11 @@ set number relativenumber
 set scrolloff=3
 "set surround
 
+nmap <leader>r <action>(ContextRun)
+
+nmap <a-e> :action Flutter.ExtractWidget<cr>
+nmap <a-s> :action StructuralSearchActions<cr>
+nmap <a-h> <action>(RecentFiles)
 
 nmap <a-=> :action EditorSelectWord<cr>
 nmap <a-s> :action SurroundWith<cr>
