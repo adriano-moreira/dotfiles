@@ -19,7 +19,6 @@ RUN chown -R adriano /home/adriano
 
 RUN su - adriano -c 'curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | zsh'
 
-
 COPY . dotfiles
 RUN chown adriano -R dotfiles
 
