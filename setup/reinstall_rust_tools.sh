@@ -5,7 +5,7 @@ if command -v rustup; then
     rustup update
 else
     #install some cammons rust project dependences
-    sudo apt install build-essential llvm clang -y
+    sudo apt install build-essential llvm clang cmake -y
 
     #install rustup
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
