@@ -1,9 +1,3 @@
-#!/bin/bash
-set -ex
-
-. "$HOME/.asdf/asdf.sh"
-
-asdf plugin add java
 asdf plugin add maven
 asdf plugin add quarkus
 asdf plugin add nodejs

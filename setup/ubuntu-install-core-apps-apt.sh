@@ -13,6 +13,7 @@ git config --global user.name 'Adriano Moreira da Silva'
 git config --global user.email adri3d@gmail.com
 
 sudo apt install tilix -y
+sudo apt install gnome-tweaks -y
 
 if ! command -v tldr; then
   sudo apt install tldr -y
